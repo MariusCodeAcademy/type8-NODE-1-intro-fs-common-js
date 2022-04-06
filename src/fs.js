@@ -4,7 +4,7 @@ const fs = require('fs');
 
 // fs.writeFile('failo pavadinimas su keliu', 'duomenys i faila', callback funkcija su klaidos objektu)
 function write() {
-  fs.writeFile('../dist/style.css', 'Username=James\nage=25', (err) => {
+  fs.writeFile('./.csv', 'Username=James\nage=25', (err) => {
     if (err) {
       console.warn(err);
       return;
@@ -25,15 +25,18 @@ const read = () => {
 };
 
 // delete
-if (fs.existsSync('./deleteMe.txt')) {
-  console.log('fileFound');
-  fs.unlink('./deleteMe.txt', (err) => {
-    if (err) {
-      console.warn(err);
-      return;
-    }
-    console.log('Files istrintas');
-  });
-} else {
-  console.log('file Not Found');
-}
+const deleteFile = (fileName) => {
+  if (fs.existsSync(fileName)) {
+    console.log('fileFound');
+    fs.unlink(fileName, (err) => {
+      if (err) {
+        console.warn(err);
+        return;
+      }
+      console.log(fileName, 'failas istrintas');
+    });
+  } else {
+    console.log(fileName, 'failas nerastas');
+  }
+};
+deleteFile('deleteMe.txt');
