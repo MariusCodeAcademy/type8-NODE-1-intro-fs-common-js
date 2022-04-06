@@ -1,0 +1,22 @@
+{
+  "name": "node-1-intro-fs-common",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MariusCodeAcademy/type8-NODE-1-intro-fs-common-js.git"
+  },
+  "author": "M.K.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MariusCodeAcademy/type8-NODE-1-intro-fs-common-js/issues"
+  },
+  "homepage": "https://github.com/MariusCodeAcademy/type8-NODE-1-intro-fs-common-js#readme",
+  "dependencies": {
+    "casual": "^1.6.2"
+  }
+}
